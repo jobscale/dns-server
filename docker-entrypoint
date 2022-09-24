@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -u
+
+main() {
+  /etc/init.d/dnsmasq start
+  nc -v -u 127.0.0.1 53
+}
+
+[[ $# == 0 ]] && main || command $@

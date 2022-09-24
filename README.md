@@ -19,7 +19,7 @@ echo "expand-hosts" | sudo tee -a /etc/dnsmasq.d/custom.conf
 sudo /etc/init.d/dnsmasq start
 ```
 
-# nameserver with systemd-resolv
+# nameserver with systemd-resolved
 
 ```
 sudo ./portForwardDNS

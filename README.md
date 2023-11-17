@@ -24,3 +24,9 @@ sudo /etc/init.d/dnsmasq start
 ```
 sudo ./portForwardDNS
 ```
+
+## docker examples
+
+```
+docker run --name dns --restart always -p 53:53 -p 53:53/udp -d ghcr.io/jobscale/nameserver
+```

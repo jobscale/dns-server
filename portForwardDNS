@@ -15,7 +15,9 @@ udpForward() {
   done
 }
 
-# tcpForward &
-echo "[udpForward]"
-udpForward &
-wait
+{
+  # tcpForward &
+  echo "[udpForward]"
+  udpForward &
+  wait
+}

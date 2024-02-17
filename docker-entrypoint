@@ -2,8 +2,10 @@
 set -u
 
 main() {
+  /etc/init.d/ssh start
+  nc -vz -w 1 127.0.0.1 22
   /etc/init.d/dnsmasq start
-  nc -v -u 127.0.0.1 53
+  nc -vz -w 1 -u 127.0.0.1 53
 }
 
 [[ $# == 0 ]] && main || command $@
